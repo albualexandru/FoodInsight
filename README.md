@@ -1,7 +1,7 @@
 # FoodInsight
 
 FoodInsight is a tiny, mobile-friendly webservice that estimates the calories
-in your food. Take (or upload) a photo, and Google's **Gemini 2.5 Pro** model
+in your food. Take (or upload) a photo, and Google's **Gemini 3.5 Flash** model
 analyzes it and returns an estimated calorie count. Your daily total is kept
 in your browser's cookies, so every time you open the page you see how many
 calories you've logged so far today.
@@ -9,7 +9,7 @@ calories you've logged so far today.
 ## Features
 
 - 📷 Take a photo (or upload one) directly from your phone
-- 🤖 Calorie estimation powered by the Gemini 2.5 Pro vision model
+- 🤖 Calorie estimation powered by the Gemini 3.5 Flash vision model
 - 🧮 Daily running total stored in your browser's cookies (no database, no accounts)
 - 📱 Simple, single-page UI designed for quick use on a phone
 
@@ -17,7 +17,7 @@ calories you've logged so far today.
 
 1. The browser sends the photo to the `/api/estimate-calories` endpoint.
 2. The Node.js/Express server forwards the image to the Gemini API
-   (`gemini-2.5-pro` model) with a prompt asking it to estimate calories.
+   (`gemini-3.5-flash` model) with a prompt asking it to estimate calories.
 3. The server parses Gemini's response and returns the food name, estimated
    calories, and a short note back to the browser.
 4. The browser adds the entry to a cookie keyed by the current date
