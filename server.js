@@ -6,7 +6,7 @@ const path = require('path');
 const { GoogleGenAI } = require('@google/genai');
 
 const PORT = process.env.PORT || 3000;
-const GEMINI_MODEL = 'gemini-2.5-pro';
+const GEMINI_MODEL = 'gemini-3.5-flash';
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 if (!GEMINI_API_KEY) {
