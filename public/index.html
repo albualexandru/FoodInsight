@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>FoodInsight</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>FoodInsight</h1>
+      <p class="app__date" id="today"></p>
+    </header>
+
+    <section class="card">
+      <p class="card__label">Today's calories</p>
+      <p class="card__total" id="total-calories">0</p>
+      <p class="card__unit">kcal</p>
+    </section>
+
+    <section class="capture">
+      <input
+        type="file"
+        id="photo-input"
+        accept="image/*"
+        capture="environment"
+        hidden
+      />
+      <button id="take-photo-btn" class="btn btn--primary">
+        📷 Take / Upload Photo
+      </button>
+      <p id="status" class="status" aria-live="polite"></p>
+    </section>
+
+    <section class="result" id="result" hidden>
+      <h2 id="result-name"></h2>
+      <p id="result-calories" class="result__calories"></p>
+      <p id="result-notes" class="result__notes"></p>
+    </section>
+
+    <section class="history">
+      <div class="history__header">
+        <h2>Today's log</h2>
+        <button id="reset-btn" class="btn btn--text">Reset day</button>
+      </div>
+      <ul id="entries-list" class="entries"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

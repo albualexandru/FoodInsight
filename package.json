@@ -1,0 +1,28 @@
+{
+  "name": "foodinsight",
+  "version": "1.0.0",
+  "description": "Snap a photo of your food and get an instant AI calorie estimate powered by Gemini.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albualexandru/FoodInsight.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/albualexandru/FoodInsight/issues"
+  },
+  "homepage": "https://github.com/albualexandru/FoodInsight#readme",
+  "dependencies": {
+    "@google/genai": "^2.12.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "multer": "^2.2.0"
+  }
+}
