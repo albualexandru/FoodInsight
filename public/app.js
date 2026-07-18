@@ -27,10 +27,14 @@
   }
 
   function getCookie(name) {
-    const match = document.cookie.match(
-      new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()[\]\\/+^])/g, '\\$1') + '=([^;]*)')
-    );
-    return match ? decodeURIComponent(match[1]) : null;
+    const prefix = `${name}=`;
+    const cookies = document.cookie.split('; ');
+    for (const cookie of cookies) {
+      if (cookie.startsWith(prefix)) {
+        return decodeURIComponent(cookie.slice(prefix.length));
+      }
+    }
+    return null;
   }
 
   function setCookie(name, value, days) {
@@ -135,7 +139,7 @@
       resultNotesEl.textContent = data.notes || '';
       resultEl.hidden = false;
 
-      setBusy(false, 'Done! Added to today\'s log.');
+      setBusy(false, "Done! Added to today's log.");
     } catch (err) {
       setBusy(false, err.message || 'Failed to estimate calories. Please try again.');
     }
